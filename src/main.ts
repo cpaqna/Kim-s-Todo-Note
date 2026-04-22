@@ -1,6 +1,6 @@
 import './style.css';
 import { initAuth, loginWithGoogle, logout, isDemoMode } from './auth';
-import { subscribeTodos, unsubscribeTodos, addTodo, setFilter } from './todo';
+import { subscribeTodos, unsubscribeTodos, setFilter } from './todo';
 import { initCalendar, updateCalendarTodos } from './calendar';
 import type { User } from 'firebase/auth';
 
