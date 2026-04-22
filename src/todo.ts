@@ -296,7 +296,7 @@ export async function reorderTodosLocal(draggedId: string, targetId: string): Pr
         if (!user) return;
         const b = writeBatch(db);
         currentTodos.forEach(t => {
-            const ref = doc(db, 'users', user.uid, 'todos', t.id);
+            const ref = doc(db!, 'users', user.uid, 'todos', t.id);
             b.update(ref, { order: t.order });
         });
         await b.commit();
